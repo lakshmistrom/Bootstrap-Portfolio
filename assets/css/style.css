@@ -1,0 +1,143 @@
+/* styles for the overall look of the portfolio site */
+/*********************/
+/* Colors*/
+/* black: #000000;
+grey: #666666;
+white: #FFFFFF;
+light-pink: #ED2C92;
+dark-pink: #ED2C92 */
+/*********************/
+
+/*********************/
+/* BASIC */
+/*********************/
+body {
+	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+	margin: 0;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+    background-image: url("../images/cover.png");
+    background-position: center;
+    background-clip: padding-box;
+}
+body > .container{
+    /* ensures content can be pushed down to give enough space for the nav to always be on top */
+    padding-top: 105px;
+}
+/*********************/
+/* MAIN */
+/*********************/
+.logo {
+    max-width: 19%;
+}
+.heading-border{
+    border-bottom: 2px solid dimgray;
+}
+#character-img{
+    width: 100%;
+    max-width: 15%;
+    display: block;
+    float: left;
+    padding: 0 15px 15px 0;
+}
+/*********************/
+/* FOOTER */
+/*********************/
+footer {
+    position: fixed;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+	background-color: dimgray;
+    border-top: 8px solid #e7e7e7;
+    color: #e7e7e7;
+}
+footer p{
+    font-size: 0.7rem;
+}
+/*********************/
+/* PORTFOLIO PAGE */
+/*********************/
+.light-grey{
+    color: #e7e7e7;
+}
+.dark-grey{
+    color: dimgray;
+}
+.white{
+    background-color: white;
+}
+.fa-layers-text:hover{
+    color: #ED2C92;
+}
+.wide-modal{
+    max-width: 1346px;
+}
+.fit-img{
+    /* allows images to display properly inside cards */
+    width: fit-content; 
+}
+/************************/
+/* BOOTSTRAP OVERWRITES */
+/************************/
+.navbar-nav{
+    /* makes sure that the navigation goes below the logo */
+    flex-direction: row;
+}
+.navbar-nav .nav-link{
+    /* helps ensure the border to the right of the link does not get too high */
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+.nav-link{
+    /* aids to keep the spacing between links appropiate given the addition of the border to the right */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card-body{
+    text-align: left;
+}
+/*********************/
+/* RESPONSIVE phones*/
+/*********************/
+@media screen and (max-width: 640px){
+    /* navigation area */
+    .logo{
+        max-width: 44%;
+        margin: 0 auto;
+    }
+    /************************/
+    /* BOOTSTRAP OVERWRITES */
+    /************************/
+    .iframe-custom{
+        /* increases height of iframe */
+        min-height: 543px;
+    }
+}
+@media screen and (min-width:640px) and (max-width: 768px) {
+    /************************/
+    /* BOOTSTRAP OVERWRITES tablet*/
+    /************************/
+    .navbar-collapse{
+        /* makes sure the navigation stays on top on the ipad */
+        flex-basis: auto;
+        flex-grow: inherit;
+    }
+    .iframe-custom{
+        /* increases height of iframe */
+        min-height: 740px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    /************************/
+    /* BOOTSTRAP OVERWRITES tablet*/
+    /************************/
+    .iframe-custom{
+        /* increases height of iframe */
+        min-height: 1084px;
+    }
+}
