@@ -80,6 +80,10 @@ footer p{
     /* allows images to display properly inside cards */
     width: fit-content; 
 }
+.iframe-custom{
+    /* increases height of iframe */
+    min-height: 784px;
+}
 /************************/
 /* BOOTSTRAP OVERWRITES */
 /************************/
@@ -107,7 +111,12 @@ footer p{
 }
 .carousel-control-next, .carousel-control-prev{
     width: 8%;
-    
+}
+.carousel-indicators .active{
+    background-color: black;
+}
+.carousel-indicators li{
+    background-color: dimgray;
 }
 /*********************/
 /* RESPONSIVE phones*/
