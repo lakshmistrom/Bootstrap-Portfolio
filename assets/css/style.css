@@ -101,6 +101,14 @@ footer p{
 .card-body{
     text-align: left;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: black;
+    
+}
+.carousel-control-next, .carousel-control-prev{
+    width: 8%;
+    
+}
 /*********************/
 /* RESPONSIVE phones*/
 /*********************/
