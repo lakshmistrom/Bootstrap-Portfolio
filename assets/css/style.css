@@ -11,19 +11,52 @@ dark-pink: #ED2C92 */
 /*********************/
 /* BASIC */
 /*********************/
-body {
-	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
-	margin: 0;
-    min-height: 400px;
-    margin-bottom: 100px;
-    clear: both;
-    background-image: url("../images/cover.png");
-    background-position: center;
-    background-clip: padding-box;
+*{
+    box-sizing: border-box;
 }
-body > .container{
+body, html{
+    height: 100%;
+    margin: auto;
+}
+body{
+    font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+}
+.bg-image{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#firstBackground {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/trolley.JPG");
+}
+#secondBackground {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/streets.JPG");
+}
+#welcomeText{
+    background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  /* font-size: 80px; */
+  border: 10px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+.text-shadow{
+    text-shadow: 0 1px #000000;
+}
+.see-through{
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+}
+body > #firstBackground.container-fluid, #secondBackground.container-fluid{
     /* ensures content can be pushed down to give enough space for the nav to always be on top */
-    padding-top: 105px;
+    padding-top: 81px;
 }
 /*********************/
 /* MAIN */
@@ -31,15 +64,13 @@ body > .container{
 .logo {
     max-width: 19%;
 }
-.heading-border{
-    border-bottom: 2px solid dimgray;
-}
+
 #character-img{
     width: 100%;
-    max-width: 15%;
-    display: block;
+    max-width: 50%;
+    /* display: block;
     float: left;
-    padding: 0 15px 15px 0;
+    padding: 0 15px 15px 0; */
 }
 /*********************/
 /* FOOTER */
@@ -51,8 +82,6 @@ footer {
 	/* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px;
-	background-color: dimgray;
-    border-top: 8px solid #e7e7e7;
     color: #e7e7e7;
 }
 footer p{
@@ -133,6 +162,13 @@ footer p{
     .iframe-custom{
         /* increases height of iframe */
         min-height: 543px;
+    }
+    #character-img{
+        width: 100%;
+        max-width: 50%;
+        /* display: block;
+        float: left;
+        padding: 0 15px 15px 0; */
     }
 }
 @media screen and (min-width:640px) and (max-width: 768px) {
