@@ -20,6 +20,9 @@ body, html{
 }
 body{
     font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
 }
 .bg-image{
     height: 100%;
@@ -27,6 +30,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 #firstBackground {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/trolley.JPG");
 }
@@ -57,6 +61,14 @@ body{
 body > #firstBackground.container-fluid, #secondBackground.container-fluid{
     /* ensures content can be pushed down to give enough space for the nav to always be on top */
     padding-top: 81px;
+}
+section{
+    border-bottom: 1px solid white;
+	padding: 1rem;
+	height: 100vh;
+	scroll-snap-align: start;
+	text-align: center;
+	position: relative;
 }
 /*********************/
 /* MAIN */
