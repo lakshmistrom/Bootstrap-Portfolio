@@ -29,28 +29,25 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 #firstBackground {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/trolley.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/trolley.png");
 }
 #secondBackground {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/photo/streets.JPG");
 }
 #welcomeText{
-    background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    border: 2px solid white;
   color: white;
-  font-weight: bold;
-  /* font-size: 80px; */
-  border: 10px solid #f1f1f1;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  /*font-weight: bold;
+  z-index: 2; */
   padding: 20px;
-  text-align: center;
 }
 .text-shadow{
     text-shadow: 0 1px #000000;
@@ -67,7 +64,7 @@ section{
 	padding: 1rem;
 	height: 100vh;
 	scroll-snap-align: start;
-	text-align: center;
+	/* text-align: center; */
 	position: relative;
 }
 /*********************/
@@ -75,14 +72,6 @@ section{
 /*********************/
 .logo {
     max-width: 19%;
-}
-
-#character-img{
-    width: 100%;
-    max-width: 50%;
-    /* display: block;
-    float: left;
-    padding: 0 15px 15px 0; */
 }
 /*********************/
 /* FOOTER */
@@ -128,21 +117,6 @@ footer p{
 /************************/
 /* BOOTSTRAP OVERWRITES */
 /************************/
-.navbar-nav{
-    /* makes sure that the navigation goes below the logo */
-    flex-direction: row;
-}
-.navbar-nav .nav-link{
-    /* helps ensure the border to the right of the link does not get too high */
-    padding-right: .5rem;
-    padding-left: .5rem;
-}
-.nav-link{
-    /* aids to keep the spacing between links appropiate given the addition of the border to the right */
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
 .card-body{
     text-align: left;
 }
@@ -166,7 +140,6 @@ footer p{
     /* navigation area */
     .logo{
         max-width: 44%;
-        margin: 0 auto;
     }
     /************************/
     /* BOOTSTRAP OVERWRITES */
@@ -175,13 +148,7 @@ footer p{
         /* increases height of iframe */
         min-height: 543px;
     }
-    #character-img{
-        width: 100%;
-        max-width: 50%;
-        /* display: block;
-        float: left;
-        padding: 0 15px 15px 0; */
-    }
+    
 }
 @media screen and (min-width:640px) and (max-width: 768px) {
     /************************/
