@@ -1,6 +1,13 @@
+runtime: python27
+threadsafe: true
 handlers:
   - url: /index\.html
     static_files: index.html
+    upload: index.html
 
   - url: /assets
-    static_files: assets
+    static_dir: assets
+
+  - url: /
+    static_files: index.html
+    upload: index.html
