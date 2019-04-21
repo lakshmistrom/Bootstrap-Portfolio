@@ -1,0 +1,6 @@
+handlers:
+  - url: /index\.html
+    static_files: index.html
+
+  - url: /assets
+    static_files: assets
